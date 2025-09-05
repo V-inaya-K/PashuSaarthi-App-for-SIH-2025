@@ -96,7 +96,7 @@ class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black87,
+      backgroundColor: Colors.blueAccent,
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -104,27 +104,27 @@ class _LoginState extends State<Login> {
             Container(
               height: 150,
               decoration: const BoxDecoration(
-                color: Colors.black,
+                color: Colors.white,
                 borderRadius: BorderRadius.only(
                   bottomLeft: Radius.circular(20),
                   bottomRight: Radius.circular(20),
                 ),
               ),
               child: Center(
-                // child: Image.asset('Renture_logo.png', width: 100, height: 100),
+                child: Image.asset('uio.jpg', height: double.maxFinite),
               ),
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 20,),
             Container(
               margin: const EdgeInsets.symmetric(horizontal: 40),
               child: Column(
                 children: [
                   Text(
-                    "Login",
+                    "LOGIN",
 
                     style: GoogleFonts.poppins(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,color: Colors.white
+                        fontSize: 30,
+                        color: Colors.white
                     ),
                   ),
                   const SizedBox(height: 20),
@@ -138,11 +138,11 @@ class _LoginState extends State<Login> {
                             hintText: "Enter Your Id",
                             focusedBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.all(Radius.circular(100)),
-                              borderSide: BorderSide(width: 3, color: Colors.blueAccent),
+                              borderSide: BorderSide(width: 3, color: Colors.black),
                             ),
                             enabledBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.all(Radius.circular(4)),
-                              borderSide: BorderSide(width: 5, color: Colors.black),
+                              borderSide: BorderSide(width: 3, color: Colors.black),
                             ),
                           ),
                         ),
@@ -159,16 +159,16 @@ class _LoginState extends State<Login> {
                       hintText: "Enter 8 digit Password",
                       focusedBorder: const OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(100)),
-                        borderSide: BorderSide(width: 3, color: Colors.blueAccent),
+                        borderSide: BorderSide(width: 3, color: Colors.black),
                       ),
                       enabledBorder: const OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(4)),
-                        borderSide: BorderSide(width: 5, color: Colors.black),
+                        borderSide: BorderSide(width: 3, color: Colors.black),
                       ),
                       suffixIcon: IconButton(
                         icon: Icon(
                           passwordVisible ? Icons.visibility : Icons.visibility_off,
-                          color: Colors.grey,
+                          color: Colors.black87,
                         ),
                         onPressed: () {
                           setState(() {
@@ -202,27 +202,7 @@ class _LoginState extends State<Login> {
                       ),
                     ),
                   ),
-                  const SizedBox(height: 20),
-                  ElevatedButton.icon(
-                    onPressed: signInWithGoogle,
-                    // icon: Image.asset(
-                    //   'assets/facebook.jpeg', // Add this logo to assets
-                    //   height: 24,
-                    // ),
-                    label: Text(
-                      'Continue with Google',
-                      style: GoogleFonts.poppins(fontSize: 16),
-                    ),
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.white,
-                      foregroundColor: Colors.black,
-                      padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 20),
-                      side: BorderSide(color: Colors.grey.shade300),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                    ),
-                  ),
+
                 ],
               ),
             ),
